@@ -1,0 +1,16 @@
+.box {
+	max-width: 140px;
+}
+
+.title {
+	font-size: 1em;
+	font-weight: 600;
+	margin: 8px 0;
+}
+.desc {
+	font-size: 12px;
+}
+
+.img {
+	border-radius: 16px;
+}
