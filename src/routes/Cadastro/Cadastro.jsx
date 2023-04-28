@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../Login/Login.module.css';
+import { Input } from '../../components/Button/Button';
 
 const Cadastro = () => {
 	return (
@@ -33,10 +34,9 @@ const Cadastro = () => {
 				/>
 			</div>
 
-			<input
-				type='submit'
-				value='Criar conta'
-				className={styles.submit}
+			<Input
+				type={'submit'}
+				value={'Criar conta'}
 			/>
 		</div>
 	);
