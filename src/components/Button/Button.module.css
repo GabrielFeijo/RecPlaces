@@ -1,0 +1,13 @@
+.btn {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	padding: 15px 0;
+	border: 0;
+	outline: 0;
+	background: #1aa7ec;
+	color: white;
+	font-weight: 700;
+	font-size: 16px;
+	border-radius: 16px;
+}

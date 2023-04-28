@@ -1,0 +1,18 @@
+.titulo {
+	font-weight: 600;
+	font-size: 24px;
+}
+
+.img {
+	border-radius: 16px;
+}
+
+.desc_infos {
+	font-weight: 700;
+	font-size: 16px;
+	margin: 10px 0;
+	max-width: 270px;
+}
+.description {
+	width: 312px;
+}

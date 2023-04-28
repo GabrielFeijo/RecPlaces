@@ -1,10 +1,11 @@
 import { Outlet } from 'react-router-dom';
 import './App.css';
+import Header from './routes/Header/Header';
 
 function App() {
 	return (
 		<>
-			<h1>tela</h1>
+			<Header />
 			<Outlet />
 		</>
 	);

@@ -1,0 +1,11 @@
+.wrap {
+	background-color: #1aa7ec;
+	z-index: 99;
+	width: 100vw !important;
+	height: 100% !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+}
