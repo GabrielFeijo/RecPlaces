@@ -11,6 +11,8 @@ import Cadastro from './routes/Cadastro/Cadastro.jsx';
 import Description from './routes/Description/Description.jsx';
 import Places from './routes/Places/Places.jsx';
 import Rotas from './routes/Rotas/Rotas.jsx';
+import Roteiro from './routes/Roteiro/Roteiro.jsx';
+import MakeRoute from './routes/MakeRoute/MakeRoute.jsx';
 
 const router = createBrowserRouter([
 	{
@@ -41,6 +43,14 @@ const router = createBrowserRouter([
 			{
 				path: '/rotas',
 				element: <Rotas />,
+			},
+			{
+				path: '/roteiro',
+				element: <Roteiro />,
+			},
+			{
+				path: '/makeroute',
+				element: <MakeRoute />,
 			},
 		],
 	},

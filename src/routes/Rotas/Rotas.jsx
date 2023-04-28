@@ -23,9 +23,9 @@ const Rotas = () => {
 				</div>
 			</div>
 
-			<div>
+			<div className={styles.btn_box}>
 				<Button text={'Confirmar rotas'} />
-				<Button2 text={'Confirmar rotas'} />
+				<Button2 text={'Adicionar mais rotas'} />
 			</div>
 		</div>
 	);

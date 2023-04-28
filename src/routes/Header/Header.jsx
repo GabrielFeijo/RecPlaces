@@ -8,7 +8,7 @@ const Header = () => {
 	return (
 		<div className={styles.box}>
 			<HambergerMenu
-				size='24'
+				size='32'
 				color='#000000'
 			/>
 			<img
@@ -16,7 +16,7 @@ const Header = () => {
 				alt='Logo'
 			/>
 			<ProfileCircle
-				size='24'
+				size='32'
 				color='#000000'
 			/>
 		</div>

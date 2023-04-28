@@ -4,3 +4,7 @@
 	justify-content: space-evenly;
 	height: 100px;
 }
+
+.box img {
+	height: 64px;
+}
