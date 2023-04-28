@@ -1,0 +1,25 @@
+.titulo {
+	font-weight: 600;
+	font-size: 24px;
+	padding-left: 24px;
+}
+
+.search {
+	position: relative;
+}
+
+.search input {
+	border: 0;
+	outline: 0;
+	border-bottom: 0.7px solid rgba(0, 0, 0, 0.7);
+	display: block;
+	width: 312px;
+	padding: 8px 0;
+	margin: 24px auto;
+}
+
+.search svg {
+	position: absolute;
+	top: 20%;
+	right: 25px;
+}

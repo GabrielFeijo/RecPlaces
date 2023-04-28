@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Card.module.css';
 
-const Card = ({ item }) => {
+export const Card = ({ item }) => {
 	return (
 		<div className={styles.box}>
 			<img
@@ -15,4 +15,16 @@ const Card = ({ item }) => {
 	);
 };
 
-export default Card;
+export const CardStar = ({ item }) => {
+	return (
+		<div className={styles.box}>
+			<img
+				src={item.img}
+				alt={item.title}
+				className={styles.img}
+			/>
+			<h2 className={styles.title}>{item.title}</h2>
+			<p className={styles.desc}>{item.desc}</p>
+		</div>
+	);
+};

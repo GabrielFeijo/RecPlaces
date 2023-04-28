@@ -4,10 +4,12 @@ import Card from '../../components/Card/Card';
 import styles from './Home.module.css';
 import { itens } from './Menu';
 import Loading from '../../components/Loading/Loading';
+import Points from '../../components/Points/Points';
 
 const Home = () => {
 	return (
 		<>
+			<Points />
 			<div className={styles.flex}>
 				{itens.map((item) => (
 					<Card

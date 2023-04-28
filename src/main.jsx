@@ -9,6 +9,7 @@ import { ThemeProvider } from './context/ThemeContext.jsx';
 import Login from './routes/Login/Login.jsx';
 import Cadastro from './routes/Cadastro/Cadastro.jsx';
 import Description from './routes/Description/Description.jsx';
+import Places from './routes/Places/Places.jsx';
 
 const router = createBrowserRouter([
 	{
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
 			{
 				path: '/description',
 				element: <Description />,
+			},
+			{
+				path: '/places',
+				element: <Places />,
 			},
 		],
 	},

@@ -1,6 +1,7 @@
 .titulo {
 	font-weight: 600;
 	font-size: 24px;
+	margin-bottom: 30px;
 }
 
 .img {
@@ -13,6 +14,11 @@
 	margin: 10px 0;
 	max-width: 270px;
 }
-.description {
+
+.box {
 	width: 312px;
+	height: 85vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
