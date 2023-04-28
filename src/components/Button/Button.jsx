@@ -6,6 +6,10 @@ export const Button = ({ text }) => {
 	return <button className={styles.btn}>{text}</button>;
 };
 
+export const Button2 = ({ text }) => {
+	return <button className={styles.btn2}>{text}</button>;
+};
+
 export const Input = ({ type, value }) => {
 	return (
 		<input

@@ -10,6 +10,7 @@ import Login from './routes/Login/Login.jsx';
 import Cadastro from './routes/Cadastro/Cadastro.jsx';
 import Description from './routes/Description/Description.jsx';
 import Places from './routes/Places/Places.jsx';
+import Rotas from './routes/Rotas/Rotas.jsx';
 
 const router = createBrowserRouter([
 	{
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
 			{
 				path: '/places',
 				element: <Places />,
+			},
+			{
+				path: '/rotas',
+				element: <Rotas />,
 			},
 		],
 	},

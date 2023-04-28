@@ -1,0 +1,15 @@
+.box {
+	margin-bottom: 8px;
+}
+.flex {
+	width: 230px;
+	display: flex;
+	justify-content: space-between;
+	margin: 5px 0 !important;
+}
+
+.nome {
+	font-weight: 500;
+	font-size: 16px;
+	margin: 0px !important;
+}

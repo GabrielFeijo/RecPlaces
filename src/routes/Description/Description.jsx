@@ -3,6 +3,11 @@ import styles from './Description.module.css';
 
 import desc from '../../assets/desc.png';
 import { Button } from '../../components/Button/Button';
+import Avaliacao from '../../components/Avaliacao/Avaliacao';
+
+const item = {
+	quantidade: 4,
+};
 
 const Description = () => {
 	return (
@@ -21,6 +26,11 @@ const Description = () => {
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 					eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				</p>
+				<div>
+					<p className={styles.desc_infos}>Avaliações</p>
+
+					<Avaliacao item={item} />
+				</div>
 			</div>
 
 			<Button text={'Criar rotas'} />
