@@ -16,15 +16,15 @@ const Login = () => {
 	const auth = async () => {
 		if (login.email && login.senha) {
 			try {
-				const login = await recFetch.post(
+				const loginBD = await recFetch.post(
 					`/api/auth`,
 					JSON.stringify({
 						email: login.email,
 						senha: login.senha,
 					})
 				);
-				console.log(login);
-				saveData(login.data.result);
+				console.log(loginBD);
+				saveData(loginBD.data.result);
 				navigate('/home');
 			} catch (error) {
 				setError('Algo deu errado!');
