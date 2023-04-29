@@ -17,6 +17,7 @@ import HistoryPoints from './routes/HistoryPoint/HistoryPoints.jsx';
 import CheckIn from './routes/CheckIn/CheckIn.jsx';
 import Sucess from './routes/Sucess/Sucess.jsx';
 import Points from './routes/Points/Points.jsx';
+import Initial from './routes/Initial/Initial.jsx';
 
 const router = createBrowserRouter([
 	{
@@ -27,16 +28,21 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: '/',
-				element: <Login />,
+				element: <Initial />,
 			},
 			{
-				path: '/home',
-				element: <Home />,
+				path: '/login',
+				element: <Login />,
 			},
 			{
 				path: '/register',
 				element: <Cadastro />,
 			},
+			{
+				path: '/home',
+				element: <Home />,
+			},
+
 			{
 				path: '/description',
 				element: <Description />,

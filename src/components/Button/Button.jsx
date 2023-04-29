@@ -2,12 +2,26 @@ import React from 'react';
 
 import styles from './Button.module.css';
 
-export const Button = ({ text }) => {
-	return <button className={styles.btn}>{text}</button>;
+export const Button = ({ text, event }) => {
+	return (
+		<button
+			className={styles.btn}
+			onClick={event}
+		>
+			{text}
+		</button>
+	);
 };
 
-export const Button2 = ({ text }) => {
-	return <button className={styles.btn2}>{text}</button>;
+export const Button2 = ({ text, event }) => {
+	return (
+		<button
+			className={styles.btn2}
+			onClick={event}
+		>
+			{text}
+		</button>
+	);
 };
 
 export const Input = ({ type, value, event }) => {

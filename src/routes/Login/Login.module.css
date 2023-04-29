@@ -2,7 +2,13 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	min-height: 80vh;
+
+	height: 95vh;
+}
+
+.logo {
+	margin-top: 1em;
+	height: 60px;
 }
 
 .titulo {
