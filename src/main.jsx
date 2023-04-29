@@ -13,20 +13,23 @@ import Places from './routes/Places/Places.jsx';
 import Rotas from './routes/Rotas/Rotas.jsx';
 import Roteiro from './routes/Roteiro/Roteiro.jsx';
 import MakeRoute from './routes/MakeRoute/MakeRoute.jsx';
+import HistoryPoints from './routes/HistoryPoint/HistoryPoints.jsx';
+import CheckIn from './routes/CheckIn/CheckIn.jsx';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <App />,
 		errorElement: <ErrorPage />,
+
 		children: [
 			{
 				path: '/',
-				element: <Home />,
+				element: <Login />,
 			},
 			{
-				path: '/login',
-				element: <Login />,
+				path: '/home',
+				element: <Home />,
 			},
 			{
 				path: '/register',
@@ -51,6 +54,14 @@ const router = createBrowserRouter([
 			{
 				path: '/makeroute',
 				element: <MakeRoute />,
+			},
+			{
+				path: '/history',
+				element: <HistoryPoints />,
+			},
+			{
+				path: '/checkin',
+				element: <CheckIn />,
 			},
 		],
 	},

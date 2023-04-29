@@ -1,0 +1,27 @@
+.box_local {
+	background: #ffffff;
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);
+	border-radius: 8px;
+	padding: 16px 24px;
+	margin-top: 20px;
+}
+
+.local {
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.points {
+	color: rgba(40, 97, 129, 1);
+	font-weight: 600;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 24px;
+}
+
+.flex p {
+	margin: 0;
+}

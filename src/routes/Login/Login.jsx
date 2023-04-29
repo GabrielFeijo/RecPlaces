@@ -1,8 +1,13 @@
 import React from 'react';
 import styles from './Login.module.css';
 import { Input } from '../../components/Button/Button';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+	const navigate = useNavigate();
+	const acess = () => {
+		navigate('/home');
+	};
 	return (
 		<div className={styles.loginBox}>
 			<div>
@@ -23,6 +28,7 @@ const Login = () => {
 			<Input
 				type={'submit'}
 				value={'Entrar'}
+				event={acess}
 			/>
 		</div>
 	);

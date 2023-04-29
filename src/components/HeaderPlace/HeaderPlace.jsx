@@ -2,14 +2,14 @@ import React from 'react';
 import styles from './HeaderPlace.module.css';
 import { SearchNormal1 } from 'iconsax-react';
 
-const HeaderPlace = () => {
+const HeaderPlace = ({ title, placeholder }) => {
 	return (
 		<div>
-			<h1 className={styles.titulo}>Eventos </h1>
+			<h1 className={styles.titulo}>{title} </h1>
 			<div className={styles.search}>
 				<input
 					type='text'
-					placeholder='Onde você quer ir?'
+					placeholder={placeholder}
 				/>
 				<SearchNormal1
 					size='20'

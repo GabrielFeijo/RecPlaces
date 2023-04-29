@@ -1,0 +1,40 @@
+.coins {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #ffffff;
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);
+	border-radius: 8px;
+	padding: 24px 0;
+}
+
+.coins h1 {
+	font-size: 20px;
+	width: 136px;
+}
+
+.subtitulo,
+.sub_recompensas {
+	font-weight: 700;
+	font-size: 20px;
+	margin-top: 40px;
+}
+.sub_recompensas {
+	margin: 20px 0;
+}
+
+.recompensa {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.name {
+	font-weight: 500;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.recompensa h2 {
+	font-size: 18px;
+	font-weight: 600;
+}

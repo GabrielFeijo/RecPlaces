@@ -1,0 +1,6 @@
+.flex {
+	min-height: 80vh;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
