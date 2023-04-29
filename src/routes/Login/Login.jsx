@@ -26,7 +26,7 @@ const Login = () => {
 				saveData(login.data.result);
 				navigate('/home');
 			} catch (error) {
-				setError('Algo deu errrado!');
+				setError('Algo deu errado!');
 				setTimeout(() => {
 					setError('');
 				}, 2500);
