@@ -9,7 +9,7 @@ const Header = () => {
 	const navigate = useNavigate();
 	const logout = () => {
 		localStorage.clear();
-		Navigate('/login');
+		navigate('/login');
 	};
 	return (
 		<div className={styles.box}>

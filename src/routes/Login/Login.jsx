@@ -60,11 +60,17 @@ const Login = () => {
 					type='email'
 					placeholder='E-mail'
 					className={styles.input}
+					name='email'
+					onChange={handleChange}
+					value={login.email ? login.email : ''}
 				/>
 				<input
 					type='password'
 					placeholder='Senha'
 					className={styles.input}
+					name='senha'
+					onChange={handleChange}
+					value={login.senha ? login.senha : ''}
 				/>
 				{error !== '' ? <p className={styles.error}>{error}</p> : ''}
 			</div>
