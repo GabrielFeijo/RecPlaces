@@ -4,9 +4,5 @@
 	font-family: 'Montserrat', sans-serif;
 	color: rgba(0, 0, 0, 0.7);
 	max-width: 360px;
-}
-
-html,
-body {
-	min-height: 100%;
+	box-sizing: border-box;
 }
