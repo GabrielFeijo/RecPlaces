@@ -1,11 +1,37 @@
+@keyframes logo {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+}
+
 .wrap {
 	background-color: #1aa7ec;
 	z-index: 99;
-	width: 100vw !important;
+	min-width: 100vw !important;
 	height: 100% !important;
 	position: absolute;
 	top: 0;
 	left: 0;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.wrap img {
+	transform: scale(0.8);
+	opacity: 0;
+	animation-name: logo;
+	animation-delay: 0.5s;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+.wrap p {
+	color: white;
+	font-weight: 700;
+	margin-bottom: 1em;
 }
