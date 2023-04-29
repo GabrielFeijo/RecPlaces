@@ -37,3 +37,9 @@
 	font-size: 20px;
 	border-radius: 16px;
 }
+
+.error {
+	color: rgb(255, 62, 49);
+	font-weight: 600;
+	margin-bottom: 10px;
+}

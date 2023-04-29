@@ -3,13 +3,49 @@ import styles from './Login.module.css';
 import { Input } from '../../components/Button/Button';
 import { Navigate, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.png';
+import recFetch from '../../axios/config';
 
 const Login = () => {
 	const navigate = useNavigate();
-	const acess = () => {
-		navigate('/home');
-	};
 
+	const [login, setLogin] = useState({});
+	const [error, setError] = useState('');
+	function handleChange(e) {
+		setLogin({ ...login, [e.target.name]: e.target.value });
+	}
+	const auth = async () => {
+		if (login.email && login.senha) {
+			try {
+				const login = await recFetch.post(
+					`/api/auth`,
+					JSON.stringify({
+						email: login.email,
+						senha: login.senha,
+					})
+				);
+				saveData(login.data.result);
+				navigate('/home');
+			} catch (error) {
+				setError('Algo deu errrado!');
+				setTimeout(() => {
+					setError('');
+				}, 2500);
+			}
+		} else {
+			setError('Preecnha todas as informações!');
+			setTimeout(() => {
+				setError('');
+			}, 2500);
+		}
+	};
+	const saveData = (value) => {
+		try {
+			const jsonValue = JSON.stringify(value);
+			localStorage.setItem('token_user', jsonValue);
+		} catch (e) {
+			// saving error
+		}
+	};
 	return (
 		<div className={styles.loginBox}>
 			<img
@@ -30,11 +66,12 @@ const Login = () => {
 					placeholder='Senha'
 					className={styles.input}
 				/>
+				{error !== '' ? <p className={styles.error}>{error}</p> : ''}
 			</div>
 			<Input
 				type={'submit'}
 				value={'Entrar'}
-				event={acess}
+				event={auth}
 			/>
 		</div>
 	);
