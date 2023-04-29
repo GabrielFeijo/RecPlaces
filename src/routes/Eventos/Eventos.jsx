@@ -4,7 +4,7 @@ import HeaderPlace from '../../components/HeaderPlace/HeaderPlace';
 import Proximo from '../../assets/proximo.png';
 import { CardStar } from '../../components/Card/Card';
 
-import styles from './Places.module.css';
+import styles from './Eventos.module.css';
 
 export const item = {
 	index: 0,
@@ -15,10 +15,13 @@ export const item = {
 	distancia: 4,
 };
 
-const Places = () => {
+const Eventos = () => {
 	return (
 		<div>
-			<HeaderPlace />
+			<HeaderPlace
+				title={'Eventos'}
+				placeholder={'Onde você quer ir'}
+			/>
 
 			<div className={styles.flex}>
 				<CardStar item={item} />
@@ -31,4 +34,4 @@ const Places = () => {
 	);
 };
 
-export default Places;
+export default Eventos;

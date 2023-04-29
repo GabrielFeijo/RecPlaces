@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Login.module.css';
 import { Input } from '../../components/Button/Button';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import recFetch from '../../axios/config';
 
@@ -23,6 +23,7 @@ const Login = () => {
 						senha: login.senha,
 					})
 				);
+				console.log(login);
 				saveData(login.data.result);
 				navigate('/home');
 			} catch (error) {

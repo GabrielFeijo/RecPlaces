@@ -9,7 +9,7 @@ import { ThemeProvider } from './context/ThemeContext.jsx';
 import Login from './routes/Login/Login.jsx';
 import Cadastro from './routes/Cadastro/Cadastro.jsx';
 import Description from './routes/Description/Description.jsx';
-import Places from './routes/Places/Places.jsx';
+import Eventos from './routes/Eventos/Eventos.jsx';
 import Rotas from './routes/Rotas/Rotas.jsx';
 import Roteiro from './routes/Roteiro/Roteiro.jsx';
 import MakeRoute from './routes/MakeRoute/MakeRoute.jsx';
@@ -18,6 +18,8 @@ import CheckIn from './routes/CheckIn/CheckIn.jsx';
 import Sucess from './routes/Sucess/Sucess.jsx';
 import Points from './routes/Points/Points.jsx';
 import Initial from './routes/Initial/Initial.jsx';
+import Todos from './routes/Todos/Todos.jsx';
+import Proximos from './routes/Proximos/Proximos.jsx';
 
 const router = createBrowserRouter([
 	{
@@ -44,12 +46,20 @@ const router = createBrowserRouter([
 			},
 
 			{
-				path: '/description',
+				path: '/description/:id',
 				element: <Description />,
 			},
 			{
-				path: '/places',
-				element: <Places />,
+				path: '/eventos',
+				element: <Eventos />,
+			},
+			{
+				path: '/todos',
+				element: <Todos />,
+			},
+			{
+				path: '/proximos',
+				element: <Proximos />,
 			},
 			{
 				path: '/rotas',

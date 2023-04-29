@@ -30,6 +30,11 @@ const MakeRoute = () => {
 				className={styles.slider}
 				id='myRange'
 			/>
+			<p className={styles.type}>Horário de Funcionamento</p>
+			<div className={styles.flex}>
+				<Select type={'O dia todo'} />
+				<Select type={'Apenas a noite'} />
+			</div>
 		</div>
 	);
 };

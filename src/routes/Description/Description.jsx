@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Description.module.css';
 
 import desc from '../../assets/desc.png';
 import { Button } from '../../components/Button/Button';
 import Avaliacao from '../../components/Avaliacao/Avaliacao';
+import { useParams } from 'react-router-dom';
 
 const item = {
 	quantidade: 4,
