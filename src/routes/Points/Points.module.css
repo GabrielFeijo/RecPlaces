@@ -1,0 +1,29 @@
+.flex {
+	height: 85vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.flex p {
+	margin-left: 0 !important;
+}
+
+.title {
+	font-weight: 600;
+	font-size: 24px;
+	margin: 1em 0;
+}
+
+.margin {
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+ol {
+	padding-left: 1em;
+}
+
+.color {
+	font-weight: 500;
+	color: #1aa7ec;
+}

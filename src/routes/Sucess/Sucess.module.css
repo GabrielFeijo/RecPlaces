@@ -1,0 +1,25 @@
+.flex {
+	height: 85vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.check {
+	margin: 8em;
+}
+
+.infos p {
+	margin: 1em 0;
+	font-weight: 500;
+}
+
+.coins {
+	font-weight: 700;
+	display: flex;
+	justify-content: space-between;
+}
+.coins img {
+	margin-left: 1em;
+}

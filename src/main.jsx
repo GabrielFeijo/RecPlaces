@@ -15,6 +15,8 @@ import Roteiro from './routes/Roteiro/Roteiro.jsx';
 import MakeRoute from './routes/MakeRoute/MakeRoute.jsx';
 import HistoryPoints from './routes/HistoryPoint/HistoryPoints.jsx';
 import CheckIn from './routes/CheckIn/CheckIn.jsx';
+import Sucess from './routes/Sucess/Sucess.jsx';
+import Points from './routes/Points/Points.jsx';
 
 const router = createBrowserRouter([
 	{
@@ -62,6 +64,14 @@ const router = createBrowserRouter([
 			{
 				path: '/checkin',
 				element: <CheckIn />,
+			},
+			{
+				path: '/completed',
+				element: <Sucess />,
+			},
+			{
+				path: '/points',
+				element: <Points />,
 			},
 		],
 	},

@@ -5,6 +5,7 @@ import Marco from '../../assets/Marco.png';
 import { Button } from '../../components/Button/Button';
 
 import styles from './CheckIn.module.css';
+import Modal from '../../components/Modal/Modal';
 
 const item = {
 	img: Marco,
@@ -15,16 +16,19 @@ const item = {
 
 const CheckIn = () => {
 	return (
-		<div className={styles.flex}>
-			<div>
-				<HeaderPlace
-					title={'Qual o local do Recife Antigo você está?'}
-					placeholder={'Digite o local'}
-				/>
-				<CardLocal item={item} />
+		<>
+			<Modal />
+			<div className={styles.flex}>
+				<div>
+					<HeaderPlace
+						title={'Qual o local do Recife Antigo você está?'}
+						placeholder={'Digite o local'}
+					/>
+					<CardLocal item={item} />
+				</div>
+				<Button text={'Fazer check-in'} />
 			</div>
-			<Button text={'Fazer check-in'} />
-		</div>
+		</>
 	);
 };
 
