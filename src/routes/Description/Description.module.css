@@ -1,3 +1,11 @@
+.box {
+	min-height: 85vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 20px !important;
+}
+
 .titulo {
 	font-weight: 600;
 	font-size: 24px;
@@ -6,19 +14,15 @@
 
 .img {
 	border-radius: 16px;
+	min-width: 355px;
 }
 
 .desc_infos {
 	font-weight: 700;
 	font-size: 16px;
 	margin: 10px 0;
-	max-width: 270px;
 }
 
-.box {
-	width: 312px;
-	height: 85vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+.comments div {
+	margin-left: 0 !important;
 }

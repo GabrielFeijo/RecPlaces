@@ -40,16 +40,14 @@ export const CardStar = ({ item }) => {
 			className={styles.box}
 			onClick={() => navigate('/description/' + item._id)}
 		>
-			<img
-				src={item.img}
-				alt={item.title}
-				className={styles.img}
+			<div
+				style={{ backgroundImage: `url(${item.img})` }}
+				className={styles.background}
 			/>
 			<h2 className={styles.title}>{item.nome}</h2>
 			<p>{stars}</p>
 			<p className={styles.desc}>{item.tipo}</p>
 			<p className={styles.desc}>{item.distancia} km</p>
-			<p className={styles.desc}>Valor aprox.: R${item.value}</p>
 		</div>
 	);
 };

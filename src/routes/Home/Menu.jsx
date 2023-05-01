@@ -9,7 +9,7 @@ export const itens = [
 		img: Proximo,
 		title: 'Próximo de mim',
 		desc: 'Dá uma olhada em uns locais massas perto de tu',
-		navigate: '/proximos',
+		navigate: '/eventos/proximos',
 	},
 	{
 		index: 1,
@@ -24,13 +24,13 @@ export const itens = [
 		img: Eventos,
 		title: 'Eventos',
 		desc: 'Fica por dentro dos eventos que tão rolando pela cidade',
-		navigate: '/eventos',
+		navigate: '/eventos/cidade',
 	},
 	{
 		index: 3,
 		img: Monumentos,
 		title: 'Todos',
 		desc: 'A gente te diz onde encontrar monumentos incríveis da cidade',
-		navigate: '/todos',
+		navigate: '/eventos/todos',
 	},
 ];

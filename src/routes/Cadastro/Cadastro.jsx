@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../Login/Login.module.css';
 import { Input } from '../../components/Button/Button';
 import logo from '../../assets/logo.png';
 import recFetch from '../../axios/config';
 import { useNavigate } from 'react-router-dom';
+import { LoadingRequest } from '../../components/Loading/Loading';
 
 const Cadastro = () => {
+	const [vh, setVh] = useState(window.innerHeight);
+	const [loading, setLoading] = useState(false);
 	const [cadastro, setCadastro] = useState({});
 	const [error, setError] = useState('');
 	const navigate = useNavigate();
@@ -13,10 +16,22 @@ const Cadastro = () => {
 		setCadastro({ ...cadastro, [e.target.name]: e.target.value });
 	}
 
+	useEffect(() => {
+		const updateVh = () => {
+			setVh(window.innerHeight);
+		};
+
+		window.addEventListener('resize', updateVh);
+
+		return () => window.removeEventListener('resize', updateVh);
+	}, []);
+
 	const register = async (e) => {
 		e.preventDefault();
 		if (cadastro.nome && cadastro.email && cadastro.senha && cadastro.rsenha) {
 			if (cadastro.senha === cadastro.rsenha) {
+				setLoading(true);
+
 				const post = {
 					nome: cadastro.nome,
 					email: cadastro.email,
@@ -35,7 +50,10 @@ const Cadastro = () => {
 					);
 					saveData(login.data.result);
 					navigate('/home');
+					setLoading(false);
 				} catch (error) {
+					setLoading(false);
+
 					setError('Algo deu errrado!');
 					setTimeout(() => {
 						setError('');
@@ -65,14 +83,19 @@ const Cadastro = () => {
 	};
 
 	return (
-		<div className={styles.loginBox}>
-			<img
-				src={logo}
-				alt='Logo'
-				className={styles.logo}
-			/>
-			<form onSubmit={register}>
+		<>
+			{loading && <LoadingRequest />}
+			<form
+				className={styles.loginBox}
+				style={{ height: vh }}
+				onSubmit={register}
+			>
 				<div>
+					<img
+						src={logo}
+						alt='Logo'
+						className={styles.logo}
+					/>
 					<h1 className={styles.titulo}>Crie sua conta</h1>
 
 					<input
@@ -110,12 +133,14 @@ const Cadastro = () => {
 					{error !== '' ? <p className={styles.error}>{error}</p> : ''}
 				</div>
 
-				<Input
-					type={'submit'}
-					value={'Criar conta'}
-				/>
+				<div style={{ marginBottom: 30, width: '100%' }}>
+					<Input
+						type={'submit'}
+						value={'Criar conta'}
+					/>
+				</div>
 			</form>
-		</div>
+		</>
 	);
 };
 

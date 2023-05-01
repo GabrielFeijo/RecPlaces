@@ -3,7 +3,7 @@ import styles from './Loading.module.css';
 
 import loading from '../../assets/loading.png';
 
-const Loading = () => {
+export const Loading = () => {
 	return (
 		<div className={styles.wrap}>
 			<div></div>
@@ -16,4 +16,16 @@ const Loading = () => {
 	);
 };
 
-export default Loading;
+export const LoadingRequest = () => {
+	return (
+		<div className={styles.box}>
+			<div className={styles.ldsRing}>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<p>Carregando</p>
+		</div>
+	);
+};

@@ -5,7 +5,7 @@ import Marco from '../../assets/Marco.png';
 import { Button } from '../../components/Button/Button';
 
 import styles from './CheckIn.module.css';
-import Modal from '../../components/Modal/Modal';
+import { Modal } from '../../components/Modal/Modal';
 
 const item = {
 	img: Marco,

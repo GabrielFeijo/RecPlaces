@@ -1,8 +1,12 @@
 .box {
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	height: 100px;
+}
+
+.box svg {
+	margin: 0 !important;
 }
 
 .box img {

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './HeaderPlace.module.css';
 import { SearchNormal1 } from 'iconsax-react';
 
-const HeaderPlace = ({ title, placeholder }) => {
+const HeaderPlace = ({ title, placeholder, value, onChange }) => {
 	return (
 		<div>
 			<h1 className={styles.titulo}>{title} </h1>
@@ -10,6 +10,8 @@ const HeaderPlace = ({ title, placeholder }) => {
 				<input
 					type='text'
 					placeholder={placeholder}
+					value={value}
+					onChange={(e) => onChange(e)}
 				/>
 				<SearchNormal1
 					size='20'

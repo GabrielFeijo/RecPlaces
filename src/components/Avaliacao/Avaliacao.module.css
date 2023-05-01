@@ -1,8 +1,12 @@
 .box {
-	margin-bottom: 8px;
+	margin-bottom: 15px;
+	width: 260px;
 }
+.box p {
+	font-size: 15px;
+}
+
 .flex {
-	width: 230px;
 	display: flex;
 	justify-content: space-between;
 	margin: 5px 0 !important;
@@ -10,6 +14,6 @@
 
 .nome {
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 16px;
 	margin: 0px !important;
 }

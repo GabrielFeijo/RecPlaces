@@ -1,7 +1,7 @@
 .flex {
-	height: calc(100vh - 100px);
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	gap: 40px;
 	align-items: center;
 	flex-direction: column;
 }
@@ -15,4 +15,37 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
+}
+
+.button {
+	width: 312px;
+	text-align: center;
+	position: relative;
+}
+
+.button p {
+	position: relative;
+	color: #8b8585;
+	font-size: 14px;
+	background-color: #fff;
+}
+
+.button:first-child p {
+	width: 160px;
+}
+
+.button p {
+	width: 175px;
+}
+
+.button {
+	margin-top: 0.5em;
+}
+
+.line {
+	height: 1px;
+	width: 100%;
+	background: #d9d9d9;
+	position: relative;
+	top: 50%;
 }

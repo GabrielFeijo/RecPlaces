@@ -3,14 +3,12 @@ import styles from './Points.module.css';
 
 import logo from '../../assets/points.png';
 
-const Points = () => {
+const Points = ({ title, description }) => {
 	return (
 		<div className={styles.box_points}>
 			<div className={styles.box_texto}>
-				<h2 className={styles.titulo}>Ganhe pontos!</h2>
-				<p className={styles.desc_points}>
-					Ganhe pontos visitando o Recife Antigo, e troque por cupons!
-				</p>
+				<h2 className={styles.titulo}>{title}</h2>
+				<p className={styles.desc_points}>{description}</p>
 			</div>
 			<img
 				src={logo}

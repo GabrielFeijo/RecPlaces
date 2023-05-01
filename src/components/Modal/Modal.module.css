@@ -8,6 +8,27 @@
 	background: rgba(0, 0, 0, 0.7);
 	z-index: 99 !important;
 }
+.modal2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0 !important;
+	min-width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 99 !important;
+}
+
+.location2 {
+	margin: 0 !important;
+	position: absolute;
+	min-width: 100%;
+	height: 345px;
+	bottom: 0;
+	background-color: white;
+	border-radius: 24px 24px 0px 0px;
+}
+
 .location {
 	margin: 0 !important;
 	position: absolute;
@@ -23,6 +44,7 @@
 	height: 6px;
 	background: #d9d9d9;
 	margin-top: 24px;
+	border-radius: 8px;
 }
 .info {
 	display: flex;

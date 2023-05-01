@@ -27,7 +27,7 @@ export const Button2 = ({ text, event }) => {
 export const Input = ({ type, value, event }) => {
 	return (
 		<input
-			className={styles.input}
+			className={styles.btn_large}
 			type={type}
 			value={value}
 			onClick={event}

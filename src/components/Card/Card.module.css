@@ -19,3 +19,10 @@
 	border-radius: 16px;
 	width: 140px;
 }
+
+.background {
+	border-radius: 16px;
+	width: 140px;
+	height: 160px;
+	background-size: cover;
+}
