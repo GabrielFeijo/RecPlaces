@@ -3,11 +3,16 @@ import React from 'react';
 import styles from './Modal.module.css';
 import { Button, Button2 } from '../Button/Button';
 
-export const Modal = () => {
+export const Modal = ({ setModal, getPermission }) => {
 	return (
 		<div className={styles.modal}>
 			<div className={styles.location}>
-				<div className={styles.line}></div>
+				<div
+					className={styles.line}
+					onClick={() => {
+						setModal(false);
+					}}
+				></div>
 				<div className={styles.info}>
 					<div>
 						<h2>Envie sua localizacação</h2>
@@ -16,7 +21,10 @@ export const Modal = () => {
 							calcular suas Chicoins corretamente!
 						</p>
 					</div>
-					<Button text={'Enviar localização'} />
+					<Button
+						text={'Enviar localização'}
+						event={getPermission}
+					/>
 					<Button2 text={'Ler QRcode'} />
 				</div>
 			</div>

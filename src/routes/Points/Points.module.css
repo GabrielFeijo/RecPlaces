@@ -1,5 +1,4 @@
 .flex {
-	height: 85vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -11,7 +10,7 @@
 .title {
 	font-weight: 600;
 	font-size: 24px;
-	margin: 1em 0;
+	margin-bottom: 1em;
 }
 
 .margin {

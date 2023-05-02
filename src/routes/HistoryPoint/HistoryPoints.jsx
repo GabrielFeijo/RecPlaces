@@ -3,6 +3,8 @@ import React from 'react';
 import chicoin from '../../assets/chicoin.png';
 import styles from './HistoryPoints.module.css';
 import Local from '../../components/Local/Local';
+import { Button } from '../../components/Button/Button';
+import { useNavigate } from 'react-router-dom';
 
 const historico = [
 	{ data: '8 de abril', local: 'Paço do Frevo', pontos: 12 },
@@ -11,6 +13,7 @@ const historico = [
 ];
 
 const HistoryPoints = () => {
+	const navigate = useNavigate();
 	return (
 		<div>
 			<div className={styles.coins}>
@@ -40,6 +43,12 @@ const HistoryPoints = () => {
 					pontos={local.pontos}
 				/>
 			))}
+			<div style={{ margin: '2em 0' }}>
+				<Button
+					text={'Fazer novo check-in'}
+					event={() => navigate('/checkin')}
+				/>
+			</div>
 		</div>
 	);
 };

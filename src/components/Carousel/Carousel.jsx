@@ -10,11 +10,13 @@ export function CarouselInfo(props) {
 				'Ganhe pontos visitando o Recife Antigo, e troque por cupons!'
 			}
 			key={0}
+			route={'/points'}
 		/>,
 		<Points
 			title={'A cidade só cresce!!'}
 			description={'Ajude o Recife a ficar de cada vez mais linda!'}
 			key={1}
+			route={'/home'}
 		/>,
 	];
 

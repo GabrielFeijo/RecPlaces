@@ -52,9 +52,9 @@ export const CardStar = ({ item }) => {
 	);
 };
 
-export const CardLocal = ({ item }) => {
+export const CardLocal = ({ item, selected, value }) => {
 	let stars = [];
-	for (let i = 0; i < item.quantidade; i++) {
+	for (let i = 0; i < item.stars; i++) {
 		stars.push(
 			<AiFillStar
 				size={16}
@@ -64,13 +64,16 @@ export const CardLocal = ({ item }) => {
 		);
 	}
 	return (
-		<div className={styles.box}>
-			<img
-				src={item.img}
-				alt={item.title}
-				className={styles.img}
+		<div
+			className={styles.box}
+			onClick={selected}
+			style={value ? { backgroundColor: '#1AA7EC', color: 'white' } : {}}
+		>
+			<div
+				style={{ backgroundImage: `url(${item.img})` }}
+				className={styles.background}
 			/>
-			<h2 className={styles.title}>{item.title}</h2>
+			<h2 className={styles.title}>{item.nome}</h2>
 			<p>{stars}</p>
 			<p className={styles.desc}>{item.tipo}</p>
 		</div>

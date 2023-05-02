@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HeaderPlace from '../../components/HeaderPlace/HeaderPlace';
 import { CardLocal } from '../../components/Card/Card';
 import Marco from '../../assets/Marco.png';
@@ -6,6 +6,7 @@ import { Button } from '../../components/Button/Button';
 
 import styles from './CheckIn.module.css';
 import { Modal } from '../../components/Modal/Modal';
+import recFetch from '../../axios/config';
 
 const item = {
 	img: Marco,
@@ -15,18 +16,68 @@ const item = {
 };
 
 const CheckIn = () => {
+	const [position, setPosition] = useState(null);
+	const [modal, setModal] = useState(false);
+	const [location, setLocation] = useState();
+	const [filter, setFilter] = useState('');
+	const getPermission = () => {
+		navigator.geolocation.getCurrentPosition(function (position) {
+			setPosition(position.coords);
+			setModal(false);
+		});
+	};
+	const filterEvents = async (e) => {
+		setFilter(e.target.value);
+
+		const valor = e.target.value;
+		const text = valor.replace(/ /g, '%20');
+
+		const result = await recFetch.get(`/api/searchPlaces?search=${text}`);
+
+		setLocation(result.data);
+	};
+
+	const [checked, setChecked] = useState('');
+	console.log(checked);
+	const selected = (id) => {
+		if (id === checked) {
+			setChecked('');
+		} else {
+			setChecked(id);
+		}
+	};
+
 	return (
 		<>
-			<Modal />
+			{modal && (
+				<Modal
+					setModal={setModal}
+					getPermission={getPermission}
+				/>
+			)}
 			<div className={styles.flex}>
 				<div>
 					<HeaderPlace
 						title={'Qual o local do Recife Antigo você está?'}
 						placeholder={'Digite o local'}
+						value={filter}
+						onChange={filterEvents}
 					/>
-					<CardLocal item={item} />
+					<div className={styles.flex2}>
+						{location &&
+							location.map((card, index) => (
+								<CardLocal
+									item={card}
+									selected={() => {
+										selected(card._id);
+									}}
+									value={checked == card._id ? true : false}
+									key={index}
+								/>
+							))}
+					</div>
 				</div>
-				<Button text={'Fazer check-in'} />
+				{checked !== '' && <Button text={'Fazer check-in'} />}
 			</div>
 		</>
 	);
