@@ -1,0 +1,12 @@
+.title {
+	font-weight: 600;
+	font-size: 24px;
+	margin-bottom: 1em;
+}
+
+.point {
+	font-weight: 700;
+	font-family: 'Montserrat', sans-serif !important;
+	color: black !important;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}

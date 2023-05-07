@@ -6,7 +6,7 @@ import recFetch from '../../axios/config';
 import { useNavigate } from 'react-router-dom';
 import { LoadingRequest } from '../../components/Loading/Loading';
 
-const Cadastro = () => {
+const Register = () => {
 	const [vh, setVh] = useState(window.innerHeight);
 	const [loading, setLoading] = useState(false);
 	const [cadastro, setCadastro] = useState({});
@@ -96,7 +96,7 @@ const Cadastro = () => {
 						alt='Logo'
 						className={styles.logo}
 					/>
-					<h1 className={styles.titulo}>Crie sua conta</h1>
+					<h1 className={styles.title}>Crie sua conta</h1>
 
 					<input
 						type='text'
@@ -144,4 +144,4 @@ const Cadastro = () => {
 	);
 };
 
-export default Cadastro;
+export default Register;

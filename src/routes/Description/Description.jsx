@@ -3,7 +3,7 @@ import styles from './Description.module.css';
 
 import desc from '../../assets/desc.png';
 import { Button } from '../../components/Button/Button';
-import Avaliacao from '../../components/Avaliacao/Avaliacao';
+import Evaluation from '../../components/Evaluation/Evaluation';
 import { useParams } from 'react-router-dom';
 import recFetch from '../../axios/config';
 
@@ -30,7 +30,7 @@ const Description = () => {
 			{description.local && (
 				<div className={styles.box}>
 					<div>
-						<h1 className={styles.titulo}>{description.nome}</h1>
+						<h1 className={styles.title}>{description.nome}</h1>
 						<img
 							src={description.img}
 							className={styles.img}
@@ -45,10 +45,10 @@ const Description = () => {
 						<p className={styles.desc_infos}>Avaliações</p>
 
 						<div className={styles.comments}>
-							<Avaliacao item={item} />
-							<Avaliacao item={item} />
-							<Avaliacao item={item} />
-							<Avaliacao item={item} />
+							<Evaluation item={item} />
+							<Evaluation item={item} />
+							<Evaluation item={item} />
+							<Evaluation item={item} />
 						</div>
 					</div>
 

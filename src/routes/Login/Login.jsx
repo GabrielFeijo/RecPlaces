@@ -80,7 +80,7 @@ const Login = () => {
 						className={styles.logo}
 					/>
 					<div>
-						<h1 className={styles.titulo}>Login</h1>
+						<h1 className={styles.title}>Login</h1>
 						<input
 							type='email'
 							placeholder='E-mail'

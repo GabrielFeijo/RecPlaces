@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import HeaderPlace from '../../components/HeaderPlace/HeaderPlace';
 
 import Proximo from '../../assets/proximo.png';
-import { CardStar } from '../../components/Card/Card';
+import { EvaluationCard } from '../../components/Card/Card';
 
-import styles from './Eventos.module.css';
+import styles from './Events.module.css';
 import { useParams } from 'react-router-dom';
 import recFetch from '../../axios/config';
 
@@ -17,7 +17,7 @@ export const item = {
 	distancia: 4,
 };
 
-const Eventos = () => {
+const Events = () => {
 	const { tipo } = useParams();
 	const [title, setTitle] = useState('');
 	const [allEvents, setAllEvents] = useState([]);
@@ -67,7 +67,7 @@ const Eventos = () => {
 			<div className={styles.flex}>
 				{events.length > 0 &&
 					events.map((event, index) => (
-						<CardStar
+						<EvaluationCard
 							item={event}
 							key={index}
 						/>
@@ -77,4 +77,4 @@ const Eventos = () => {
 	);
 };
 
-export default Eventos;
+export default Events;

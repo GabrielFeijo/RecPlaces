@@ -5,7 +5,7 @@ import { SearchNormal1 } from 'iconsax-react';
 const HeaderPlace = ({ title, placeholder, value, onChange }) => {
 	return (
 		<div>
-			<h1 className={styles.titulo}>{title} </h1>
+			<h1 className={styles.title}>{title} </h1>
 			<div className={styles.search}>
 				<input
 					type='text'

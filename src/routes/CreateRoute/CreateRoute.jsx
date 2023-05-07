@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import styles from './MakeRoute.module.css';
+import styles from './CreateRoute.module.css';
 import { Select, SelectFunc } from '../../components/Select/Select';
 import { types } from './Tipos';
 import { Button } from '../../components/Button/Button';
 import { ModalGeoLocation } from '../../components/Modal/Modal';
 
-const MakeRoute = () => {
+const CreateRoute = () => {
 	const [range, setRange] = useState(50);
 	const [vh, setVh] = useState(window.innerHeight);
 	const [modal, setModal] = useState(false);
-	const [position, setPosition] = useState(null);
+	const [position, setPosition] = useState();
 
-	const [filter, setFilter] = useState({});
+	const [selected, setSelected] = useState({});
+	const [filters, setFilters] = useState([]);
+	const [fullDay, setFullDay] = useState(false);
+
 	useEffect(() => {
 		const updateVh = () => {
 			setVh(window.innerHeight);
@@ -23,15 +26,31 @@ const MakeRoute = () => {
 	}, []);
 
 	function handleChange(type, value) {
-		setFilter({ ...filter, [type]: !value });
-		console.log(filter);
+		setSelected({ ...selected, [type]: !value });
+
+		if (!value) {
+			setFilters([...filters, type]);
+		} else {
+			setFilters(filters.filter((filter) => filter !== type));
+		}
+		console.log(filters);
 	}
 
 	const getPermission = () => {
 		navigator.geolocation.getCurrentPosition(function (position) {
-			setPosition(position.coords);
+			const coords = [position.coords.latitude, position.coords.longitude];
+			setPosition(coords);
+			console.log(coords);
 			setModal(false);
 		});
+	};
+
+	const createFilter = () => {
+		console.log(filters);
+		console.log(`Preco: ` + range);
+		console.log(`O dia todo: ` + fullDay);
+
+		setModal(true);
 	};
 
 	return (
@@ -48,7 +67,7 @@ const MakeRoute = () => {
 			>
 				<div>
 					<p>{position}</p>
-					<h1 className={styles.titulo}>Faz tua rota</h1>
+					<h1 className={styles.title}>Faz tua rota</h1>
 					<p className={styles.type}>Tipo de local</p>
 					<div>
 						{types.map((type, index) => (
@@ -56,7 +75,7 @@ const MakeRoute = () => {
 								type={type}
 								key={index}
 								onChange={handleChange}
-								value={filter[type] ? filter[type] : false}
+								value={selected[type] ? selected[type] : false}
 							/>
 						))}
 					</div>
@@ -75,14 +94,14 @@ const MakeRoute = () => {
 					<SelectFunc
 						type={'O dia todo'}
 						type2={'Apenas a noite'}
-						onChange={handleChange}
-						value={filter['O dia todo'] ? filter['O dia todo'] : false}
+						onChange={() => setFullDay(!fullDay)}
+						value={fullDay}
 					/>
 				</div>
 				<Button
 					text={'Criar minha rotas'}
 					event={() => {
-						setModal(true);
+						createFilter();
 					}}
 				/>
 			</div>
@@ -90,4 +109,4 @@ const MakeRoute = () => {
 	);
 };
 
-export default MakeRoute;
+export default CreateRoute;

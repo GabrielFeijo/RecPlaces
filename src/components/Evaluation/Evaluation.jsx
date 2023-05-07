@@ -1,9 +1,9 @@
 import React from 'react';
 
-import styles from './Avaliacao.module.css';
+import styles from './Evaluation.module.css';
 import { AiFillStar } from 'react-icons/ai';
 
-const Avaliacao = ({ item }) => {
+const Evaluation = ({ item }) => {
 	let stars = [];
 	for (let i = 0; i < item.quantidade; i++) {
 		stars.push(
@@ -17,7 +17,7 @@ const Avaliacao = ({ item }) => {
 	return (
 		<div className={styles.box}>
 			<div className={styles.flex}>
-				<h3 className={styles.nome}>Fulano de tal</h3>
+				<h3 className={styles.name}>Fulano de tal</h3>
 				<p>{stars}</p>
 			</div>
 			<p>Ótimo lugar para ir com a família! Amei a comidas</p>
@@ -25,4 +25,4 @@ const Avaliacao = ({ item }) => {
 	);
 };
 
-export default Avaliacao;
+export default Evaluation;

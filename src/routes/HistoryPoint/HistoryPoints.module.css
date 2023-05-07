@@ -13,17 +13,17 @@
 	width: 136px;
 }
 
-.subtitulo,
-.sub_recompensas {
+.subtitle,
+.sub_rewards {
 	font-weight: 700;
 	font-size: 20px;
 	margin-top: 40px;
 }
-.sub_recompensas {
+.sub_rewards {
 	margin: 20px 0;
 }
 
-.recompensa {
+.reward {
 	font-size: 18px;
 	font-weight: 600;
 }
@@ -34,7 +34,7 @@
 	margin-bottom: 10px;
 }
 
-.recompensa h2 {
+.reward h2 {
 	font-size: 18px;
 	font-weight: 600;
 }

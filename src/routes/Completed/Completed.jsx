@@ -1,11 +1,11 @@
 import React from 'react';
 
-import styles from './Sucess.module.css';
+import styles from './Completed.module.css';
 import completed from '../../assets/completed.png';
 import coin from '../../assets/coin.png';
 import { Button } from '../../components/Button/Button';
 
-const Sucess = () => {
+const Completed = () => {
 	return (
 		<div className={styles.flex}>
 			<img
@@ -32,4 +32,4 @@ const Sucess = () => {
 	);
 };
 
-export default Sucess;
+export default Completed;

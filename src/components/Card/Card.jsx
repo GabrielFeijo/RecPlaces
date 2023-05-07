@@ -23,7 +23,7 @@ export const Card = ({ item }) => {
 	);
 };
 
-export const CardStar = ({ item }) => {
+export const EvaluationCard = ({ item }) => {
 	const navigate = useNavigate();
 	let stars = [];
 	for (let i = 0; i < item.stars; i++) {
@@ -52,7 +52,7 @@ export const CardStar = ({ item }) => {
 	);
 };
 
-export const CardLocal = ({ item, selected, value }) => {
+export const LocationCard = ({ item, selected, value }) => {
 	let stars = [];
 	for (let i = 0; i < item.stars; i++) {
 		stars.push(
@@ -76,6 +76,27 @@ export const CardLocal = ({ item, selected, value }) => {
 			<h2 className={styles.title}>{item.nome}</h2>
 			<p>{stars}</p>
 			<p className={styles.desc}>{item.tipo}</p>
+		</div>
+	);
+};
+
+export const PostCard = ({ post }) => {
+	const navigate = useNavigate();
+	return (
+		<div
+			className={styles.box}
+			onClick={() => {
+				navigate(post.navigate);
+			}}
+		>
+			<img
+				src={post.img}
+				alt={post.title}
+				className={styles.img}
+			/>
+			<h2 className={styles.title}>{post.title}</h2>
+			<p className={styles.desc}>{post.desc}</p>
+			<p className={styles.distance}>{post.distance} km</p>
 		</div>
 	);
 };

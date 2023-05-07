@@ -15,6 +15,11 @@
 	font-size: 12px;
 }
 
+.distance {
+	font-size: 12px;
+	margin: 8px 0;
+}
+
 .img {
 	border-radius: 16px;
 	width: 140px;

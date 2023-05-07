@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import HeaderPlace from '../../components/HeaderPlace/HeaderPlace';
-import { CardLocal } from '../../components/Card/Card';
+import { LocationCard } from '../../components/Card/Card';
 import Marco from '../../assets/Marco.png';
 import { Button } from '../../components/Button/Button';
 
@@ -66,7 +66,7 @@ const CheckIn = () => {
 					<div className={styles.flex2}>
 						{location &&
 							location.map((card, index) => (
-								<CardLocal
+								<LocationCard
 									item={card}
 									selected={() => {
 										selected(card._id);
@@ -77,7 +77,14 @@ const CheckIn = () => {
 							))}
 					</div>
 				</div>
-				{checked !== '' && <Button text={'Fazer check-in'} />}
+				{checked !== '' && (
+					<Button
+						text={'Fazer check-in'}
+						event={() => {
+							setModal(true);
+						}}
+					/>
+				)}
 			</div>
 		</>
 	);

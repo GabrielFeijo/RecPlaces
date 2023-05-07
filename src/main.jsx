@@ -7,16 +7,19 @@ import ErrorPage from './routes/ErrorPage/ErrorPage.jsx';
 import Home from './routes/Home/Home.jsx';
 import { ThemeProvider } from './context/ThemeContext.jsx';
 import Login from './routes/Login/Login.jsx';
-import Cadastro from './routes/Cadastro/Cadastro.jsx';
+import Register from './routes/Register/Register.jsx';
 import Description from './routes/Description/Description.jsx';
-import Eventos from './routes/Eventos/Eventos.jsx';
-import Roteiro from './routes/Roteiro/Roteiro.jsx';
-import MakeRoute from './routes/MakeRoute/MakeRoute.jsx';
+import Events from './routes/Events/Events.jsx';
+import RoadMap from './routes/RoadMap/RoadMap.jsx';
+import CreateRoute from './routes/CreateRoute/CreateRoute.jsx';
 import HistoryPoints from './routes/HistoryPoint/HistoryPoints.jsx';
 import CheckIn from './routes/CheckIn/CheckIn.jsx';
-import Sucess from './routes/Sucess/Sucess.jsx';
+import Completed from './routes/Completed/Completed.jsx';
 import Points from './routes/Points/Points.jsx';
 import Initial from './routes/Initial/Initial.jsx';
+import Feed from './routes/Feed/Feed.jsx';
+import Post from './routes/Post/Post.jsx';
+import InteractiveMap from './routes/InteractiveMap/InteractiveMap.jsx';
 
 const router = createBrowserRouter([
 	{
@@ -35,29 +38,35 @@ const router = createBrowserRouter([
 			},
 			{
 				path: '/register',
-				element: <Cadastro />,
+				element: <Register />,
 			},
 			{
 				path: '/home',
 				element: <Home />,
 			},
-
+			{
+				path: '/feed',
+				element: <Feed />,
+			},
+			{
+				path: '/post/:id',
+				element: <Post />,
+			},
 			{
 				path: '/description/:id',
 				element: <Description />,
 			},
 			{
-				path: '/eventos/:tipo',
-				element: <Eventos />,
-			},
-
-			{
-				path: '/roteiro',
-				element: <Roteiro />,
+				path: '/events/:tipo',
+				element: <Events />,
 			},
 			{
-				path: '/makeroute',
-				element: <MakeRoute />,
+				path: '/roadmap',
+				element: <RoadMap />,
+			},
+			{
+				path: '/createroute',
+				element: <CreateRoute />,
 			},
 			{
 				path: '/history',
@@ -69,11 +78,15 @@ const router = createBrowserRouter([
 			},
 			{
 				path: '/completed',
-				element: <Sucess />,
+				element: <Completed />,
 			},
 			{
 				path: '/points',
 				element: <Points />,
+			},
+			{
+				path: '/interactivemap',
+				element: <InteractiveMap />,
 			},
 		],
 	},

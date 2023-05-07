@@ -13,7 +13,7 @@ const Points = ({ title, description, route }) => {
 				navigate(route);
 			}}
 		>
-			<div className={styles.box_texto}>
+			<div className={styles.box_text}>
 				<h2 className={styles.titulo}>{title}</h2>
 				<p className={styles.desc_points}>{description}</p>
 			</div>

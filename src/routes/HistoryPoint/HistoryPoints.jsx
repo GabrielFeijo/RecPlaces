@@ -23,9 +23,9 @@ const HistoryPoints = () => {
 					alt='Chicoin'
 				/>
 			</div>
-			<h2 className={styles.sub_recompensas}>Recompensas possíveis</h2>
+			<h2 className={styles.sub_rewards}>Recompensas possíveis</h2>
 			<div className={styles.coins}>
-				<div className={styles.recompensa}>
+				<div className={styles.reward}>
 					<p className={styles.name}>Caneca da Loja Tal</p>
 					<h2>50 Chicoins</h2>
 				</div>
@@ -34,13 +34,14 @@ const HistoryPoints = () => {
 					alt='Chicoin'
 				/>
 			</div>
-			<h2 className={styles.subtitulo}>Seu histórico de pontos</h2>
+			<h2 className={styles.subtitle}>Seu histórico de pontos</h2>
 
-			{historico.map((local) => (
+			{historico.map((local, index) => (
 				<Local
 					data={local.data}
 					local={local.local}
 					pontos={local.pontos}
+					key={index}
 				/>
 			))}
 			<div style={{ margin: '2em 0' }}>

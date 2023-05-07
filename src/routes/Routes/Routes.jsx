@@ -1,14 +1,14 @@
 import React from 'react';
 
-import styles from './Rotas.module.css';
+import styles from './Routes.module.css';
 import { CloseCircle } from 'iconsax-react';
 import { Button, Button2 } from '../../components/Button/Button';
 
-const Rotas = () => {
+const Routes = () => {
 	return (
 		<div className={styles.wrap}>
 			<div>
-				<h1 className={styles.titulo}>Seus roteiros de hoje</h1>
+				<h1 className={styles.title}>Seus roteiros de hoje</h1>
 				<div className={styles.box_shadow}>
 					<p className={styles.routes}>Rotas adicionadas</p>
 					<div className={styles.flex_place}>
@@ -31,4 +31,4 @@ const Rotas = () => {
 	);
 };
 
-export default Rotas;
+export default Routes;
