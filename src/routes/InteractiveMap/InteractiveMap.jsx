@@ -12,6 +12,7 @@ const customStyle = [
 		],
 	},
 ];
+console.log(import.meta.env.VITE_GOOGLE_API_KEY);
 
 const InteractiveMap = () => {
 	const [location, setPosition] = useState({
