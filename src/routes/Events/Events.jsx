@@ -5,7 +5,7 @@ import Proximo from '../../assets/proximo.png';
 import { EvaluationCard } from '../../components/Card/Card';
 
 import styles from './Events.module.css';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import recFetch from '../../axios/config';
 
 export const item = {

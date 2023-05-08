@@ -1,0 +1,23 @@
+.box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.box h1,
+.box p {
+	margin: 0.5em 0 !important;
+}
+
+.title {
+	font-weight: 600;
+	font-size: 24px;
+	margin-bottom: 1em;
+}
+
+.destiny {
+	font-weight: 500;
+}
+
+.instructions {
+	margin: 1em 0;
+}

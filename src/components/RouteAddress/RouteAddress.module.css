@@ -1,0 +1,11 @@
+.flex_place {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 0;
+}
+
+.flex_place p {
+	width: 200px;
+	margin: 0;
+}
