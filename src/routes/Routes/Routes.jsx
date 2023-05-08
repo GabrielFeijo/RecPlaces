@@ -13,9 +13,10 @@ const Routes = () => {
 	const [addedRoutes, setAddedRoutes] = useState([]);
 
 	useEffect(() => {
-		setAddedRoutes(location.state.routes);
-		console.log(location.state.routes);
-	});
+		if (location.state != null) {
+			setAddedRoutes(location.state.routes);
+		}
+	}, []);
 
 	const filter = (id) => {
 		setAddedRoutes(addedRoutes.filter((route) => route.id !== id));

@@ -24,25 +24,36 @@ const Description = () => {
 	const fetchData = async () => {
 		const data = await recFetch.get(`/api/description/${id}`);
 		setDescription(data.data);
-		const routes = location.state.routes;
+	};
 
-		let existe = false;
-		for (let route in routes) {
-			if (route.id == data._id) {
-				existe = true;
+	const newRoute = () => {
+		let routes = [];
+		if (location.state != null) {
+			routes = location.state.routes;
+
+			let existe = false;
+			for (let route in routes) {
+				if (routes[route].id == description._id) {
+					existe = true;
+				}
 			}
-		}
-		if (!existe) {
-			setAddedRoutes([
-				routes,
-				{
-					id: data.data._id,
-					address: `${data.data.local.rua}, ${data.data.local.numero},{' '}${data.data.local.CEP} - ${data.data.local.cidade}{' '}${data.data.local.UF}`,
+			if (!existe) {
+				routes.push({
+					id: description._id,
+					address: `${description.local.rua}, ${
+						description.local.numero ? description.local.numero : 'N/A'
+					}, ${description.local.CEP} - ${description.local.cidade} ${
+						description.local.UF
+					}`,
 					lat: 1,
 					lng: 2,
-				},
-			]);
+				});
+			}
 		}
+
+		navigate('/routes', {
+			state: { routes: routes },
+		});
 	};
 
 	return (
@@ -57,7 +68,8 @@ const Description = () => {
 						/>
 						<p className={styles.desc_infos}>{description.contato}</p>
 						<p className={styles.desc_infos}>
-							{description.local.rua}, {description.local.numero},{' '}
+							{description.local.rua},{' '}
+							{description.local.numero ? description.local.numero : 'N/A'},{' '}
 							{description.local.CEP} - {description.local.cidade}{' '}
 							{description.local.UF}
 						</p>
@@ -74,11 +86,7 @@ const Description = () => {
 
 					<Button
 						text={'Adicionar essa rota'}
-						event={() =>
-							navigate('/routes', {
-								state: { routes: addedRoutes },
-							})
-						}
+						event={newRoute}
 					/>
 				</div>
 			)}

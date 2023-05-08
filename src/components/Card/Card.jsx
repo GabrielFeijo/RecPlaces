@@ -42,7 +42,9 @@ export const EvaluationCard = ({ item }) => {
 			className={styles.box}
 			onClick={() =>
 				navigate('/description/' + item._id, {
-					state: { routes: location.state.routes },
+					state: {
+						routes: location.state != null ? location.state.routes : [],
+					},
 				})
 			}
 		>
