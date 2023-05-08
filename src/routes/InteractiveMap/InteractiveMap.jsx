@@ -92,14 +92,7 @@ const InteractiveMap = () => {
 									position={{ lat: position.lat + 0.005, lng: position.lng }}
 									label={{ text: 'Frevinho leve', className: styles.point }}
 								/>
-								<Marker
-									icon={{
-										url: 'https://cdn.discordapp.com/attachments/786006828466044931/1104564403250155590/Video_do_WhatsApp_de_2023-05-06_as_21.24.09.mp4',
-										scaledSize: { width: 110, height: 110 },
-									}}
-									position={{ lat: position.lat + 0.005, lng: position.lng }}
-									label={{ text: 'Frevinho leve', className: styles.point }}
-								/>
+
 								<Marker
 									icon={{
 										url: 'https://cdn.discordapp.com/attachments/786006828466044931/1104569817056411730/Autoconhecimento._Saude_Mental._Janeiro_Branco._Video_para_Reels_do_Instagram..gif',
