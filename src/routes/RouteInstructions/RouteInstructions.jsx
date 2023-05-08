@@ -37,33 +37,36 @@ const RouteInstructions = () => {
 	const loadDirections = () => {
 		const DirectionsService = new google.maps.DirectionsService();
 
-		DirectionsService.route(
-			{
-				origin: new google.maps.LatLng(position.lat, position.lng),
-				destination: new google.maps.LatLng(-8.0622, -34.8708),
-				travelMode: google.maps.TravelMode.DRIVING,
-			},
-			(result, status) => {
-				if (status === google.maps.DirectionsStatus.OK) {
-					console.log(result.routes[0].legs[0].steps);
-					setSteps(result.routes[0].legs[0].steps);
-					setDirections(result);
-				} else {
-					console.error(`error fetching directions ${result}`);
-				}
-			}
-		);
-	};
-
-	useEffect(() => {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(function (position) {
 				setPosition({
 					lat: position.coords.latitude,
 					lng: position.coords.longitude,
 				});
+				DirectionsService.route(
+					{
+						origin: new google.maps.LatLng(
+							position.coords.latitude,
+							position.coords.longitude
+						),
+						destination: new google.maps.LatLng(-8.0622, -34.8708),
+						travelMode: google.maps.TravelMode.DRIVING,
+					},
+					(result, status) => {
+						if (status === google.maps.DirectionsStatus.OK) {
+							console.log(result.routes[0].legs[0].steps);
+							setSteps(result.routes[0].legs[0].steps);
+							setDirections(result);
+						} else {
+							console.error(`error fetching directions ${result}`);
+						}
+					}
+				);
 			});
 		}
+	};
+
+	useEffect(() => {
 		const updateVh = () => {
 			setVh(window.innerHeight);
 		};
