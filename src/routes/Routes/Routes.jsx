@@ -43,7 +43,10 @@ const Routes = () => {
 			</div>
 
 			<div className={styles.btn_box}>
-				<Button text={'Confirmar rotas'} />
+				<Button
+					text={'Confirmar rotas'}
+					event={() => navigate('/routeinstructions')}
+				/>
 				<Button2
 					text={'Adicionar mais rotas'}
 					event={() =>
