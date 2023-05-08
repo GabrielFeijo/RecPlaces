@@ -20,6 +20,9 @@ import Initial from './routes/Initial/Initial.jsx';
 import Feed from './routes/Feed/Feed.jsx';
 import Post from './routes/Post/Post.jsx';
 import InteractiveMap from './routes/InteractiveMap/InteractiveMap.jsx';
+import RouteInstructions from './routes/RouteInstructions/RouteInstructions.jsx';
+import PropsTest from './routes/PropsTest/PropsTest.jsx';
+import Routes from './routes/Routes/Routes.jsx';
 
 const router = createBrowserRouter([
 	{
@@ -61,6 +64,10 @@ const router = createBrowserRouter([
 				element: <Events />,
 			},
 			{
+				path: '/routes',
+				element: <Routes />,
+			},
+			{
 				path: '/roadmap',
 				element: <RoadMap />,
 			},
@@ -87,6 +94,14 @@ const router = createBrowserRouter([
 			{
 				path: '/interactivemap',
 				element: <InteractiveMap />,
+			},
+			{
+				path: '/routeinstructions',
+				element: <RouteInstructions />,
+			},
+			{
+				path: '/props',
+				element: <PropsTest />,
 			},
 		],
 	},

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Card.module.css';
 import { AiFillStar } from 'react-icons/ai';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const Card = ({ item }) => {
 	const navigate = useNavigate();
@@ -25,6 +25,8 @@ export const Card = ({ item }) => {
 
 export const EvaluationCard = ({ item }) => {
 	const navigate = useNavigate();
+	const location = useLocation();
+
 	let stars = [];
 	for (let i = 0; i < item.stars; i++) {
 		stars.push(
@@ -38,7 +40,11 @@ export const EvaluationCard = ({ item }) => {
 	return (
 		<div
 			className={styles.box}
-			onClick={() => navigate('/description/' + item._id)}
+			onClick={() =>
+				navigate('/description/' + item._id, {
+					state: { routes: location.state.routes },
+				})
+			}
 		>
 			<div
 				style={{ backgroundImage: `url(${item.img})` }}
