@@ -12,6 +12,7 @@ import Step from '../../components/Step/Step';
 import { Location } from 'iconsax-react';
 
 import walking from '../../assets/walking.png';
+import { ModalGeoLocation } from '../../components/Modal/Modal';
 
 const RouteInstructions = () => {
 	const [vh, setVh] = useState(window.innerHeight);
@@ -33,7 +34,7 @@ const RouteInstructions = () => {
 		},
 	];
 
-	const Load = () => {
+	const loadDirections = () => {
 		const DirectionsService = new google.maps.DirectionsService();
 
 		DirectionsService.route(
@@ -55,12 +56,14 @@ const RouteInstructions = () => {
 	};
 
 	useEffect(() => {
-		navigator.geolocation.getCurrentPosition(function (position) {
-			setPosition({
-				lat: position.coords.latitude,
-				lng: position.coords.longitude,
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(function (position) {
+				setPosition({
+					lat: position.coords.latitude,
+					lng: position.coords.longitude,
+				});
 			});
-		});
+		}
 		const updateVh = () => {
 			setVh(window.innerHeight);
 		};
@@ -69,6 +72,7 @@ const RouteInstructions = () => {
 
 		return () => window.removeEventListener('resize', updateVh);
 	}, []);
+
 	return (
 		<div
 			className={styles.box}
@@ -90,7 +94,7 @@ const RouteInstructions = () => {
 							center={position}
 							zoom={13}
 							options={{ disableDefaultUI: true, styles: customStyle }}
-							onLoad={Load}
+							onLoad={loadDirections}
 						>
 							<>
 								{directions && <DirectionsRenderer directions={directions} />}
