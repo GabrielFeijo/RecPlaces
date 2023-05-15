@@ -1,10 +1,9 @@
 import React from 'react';
 import styles from './Points.module.css';
 
-import logo from '../../assets/points.png';
 import { useNavigate } from 'react-router-dom';
 
-const Points = ({ title, description, route }) => {
+const Points = ({ title, description, route, img }) => {
 	const navigate = useNavigate();
 	return (
 		<div
@@ -18,7 +17,7 @@ const Points = ({ title, description, route }) => {
 				<p className={styles.desc_points}>{description}</p>
 			</div>
 			<img
-				src={logo}
+				src={img}
 				alt='Logo'
 			/>
 		</div>

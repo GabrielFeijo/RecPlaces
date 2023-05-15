@@ -23,6 +23,7 @@ import InteractiveMap from './routes/InteractiveMap/InteractiveMap.jsx';
 import RouteInstructions from './routes/RouteInstructions/RouteInstructions.jsx';
 import PropsTest from './routes/PropsTest/PropsTest.jsx';
 import Routes from './routes/Routes/Routes.jsx';
+import Profile from './routes/Profile/Profile.jsx';
 
 const router = createBrowserRouter([
 	{
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
 			{
 				path: '/feed',
 				element: <Feed />,
+			},
+			{
+				path: '/profile',
+				element: <Profile />,
 			},
 			{
 				path: '/post/:id',
