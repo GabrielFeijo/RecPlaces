@@ -2,6 +2,9 @@ import React from 'react';
 import styles from './Card.module.css';
 import { AiFillStar } from 'react-icons/ai';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { ArrowDown2 } from 'iconsax-react';
+
+import chicoin from '../../assets/chicoin.png';
 
 export const Card = ({ item }) => {
 	const navigate = useNavigate();
@@ -105,6 +108,37 @@ export const PostCard = ({ post }) => {
 			<h2 className={styles.title}>{post.title}</h2>
 			<p className={styles.desc}>{post.desc}</p>
 			<p className={styles.distance}>{post.distance} km</p>
+		</div>
+	);
+};
+
+export const FaqCard = ({ question }) => {
+	return (
+		<div className={styles.card}>
+			<h2 className={styles.title}>Lorem ipsum dolor?</h2>
+			<ArrowDown2
+				size='24'
+				color='#286181'
+			/>
+		</div>
+	);
+};
+
+export const RewardCard = ({ reward }) => {
+	const navigate = useNavigate();
+	return (
+		<div
+			className={styles.coins}
+			onClick={() => navigate(`/rewards/${reward.id}`)}
+		>
+			<div className={styles.reward}>
+				<p className={styles.name}>{reward.name}</p>
+				<p className={styles.price}>Custa {reward.price} Chicoins</p>
+			</div>
+			<img
+				src={chicoin}
+				alt='Chicoin'
+			/>
 		</div>
 	);
 };

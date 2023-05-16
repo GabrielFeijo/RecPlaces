@@ -7,6 +7,7 @@
 
 .box svg {
 	margin: 0 !important;
+	cursor: pointer;
 }
 
 .box img {
@@ -29,7 +30,7 @@
 
 .sidebar a {
 	text-decoration: none;
-	font-size: 16px;
+	font-size: 1em;
 	display: block;
 	transition: 0.3s;
 }
@@ -38,10 +39,11 @@
 	font-weight: 700;
 	color: #1aa7ec;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-	padding: 15px;
+	padding: 1em;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	cursor: pointer;
 }
 .option p,
 .option svg {
@@ -59,4 +61,5 @@
 	font-size: 40px;
 	margin-left: 50px;
 	color: #818181;
+	cursor: pointer;
 }

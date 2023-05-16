@@ -1,0 +1,28 @@
+.title {
+	font-weight: 600;
+	font-size: 24px;
+	margin-bottom: 1em;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	height: calc(100% - 50px);
+}
+
+.logout {
+	font-weight: 700;
+	color: #1aa7ec;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.logout:hover {
+	text-decoration: underline;
+}
+
+.edit {
+	width: 312px;
+}

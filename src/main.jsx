@@ -24,6 +24,10 @@ import RouteInstructions from './routes/RouteInstructions/RouteInstructions.jsx'
 import PropsTest from './routes/PropsTest/PropsTest.jsx';
 import Routes from './routes/Routes/Routes.jsx';
 import Profile from './routes/Profile/Profile.jsx';
+import Faq from './routes/Faq/Faq.jsx';
+import AvailableRewards from './routes/AvailableRewards/AvailableRewards.jsx';
+import ChosenReward from './routes/ChosenReward/ChosenReward.jsx';
+import RedeemReward from './routes/RedeemReward/RedeemReward.jsx';
 
 const router = createBrowserRouter([
 	{
@@ -57,6 +61,10 @@ const router = createBrowserRouter([
 				element: <Profile />,
 			},
 			{
+				path: '/faq',
+				element: <Faq />,
+			},
+			{
 				path: '/post/:id',
 				element: <Post />,
 			},
@@ -83,6 +91,18 @@ const router = createBrowserRouter([
 			{
 				path: '/history',
 				element: <HistoryPoints />,
+			},
+			{
+				path: '/rewards',
+				element: <AvailableRewards />,
+			},
+			{
+				path: '/rewards/:id',
+				element: <ChosenReward />,
+			},
+			{
+				path: '/redeemreward',
+				element: <RedeemReward />,
 			},
 			{
 				path: '/checkin',

@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
 	const navigate = useNavigate();
-	
 
 	const openNav = () => {
 		document.querySelector('#mySidebar').style.width = '250px';
@@ -28,8 +27,22 @@ const Header = () => {
 				>
 					×
 				</a>
-				<div className={styles.option}>
-					<p>Minhas Chicoins</p>{' '}
+				<div
+					className={styles.option}
+					onClick={() => navigate('/home')}
+				>
+					<p>Página Inicial</p>
+					<ArrowRight2
+						size='16'
+						color='#1aa7ec'
+						variant='Bold'
+					/>
+				</div>
+				<div
+					className={styles.option}
+					onClick={() => navigate('/history')}
+				>
+					<p>Minhas Chicoins</p>
 					<ArrowRight2
 						size='16'
 						color='#1aa7ec'
@@ -44,7 +57,10 @@ const Header = () => {
 						variant='Bold'
 					/>
 				</div>
-				<div className={styles.option}>
+				<div
+					className={styles.option}
+					onClick={() => navigate('/faq')}
+				>
 					<p>Perguntas frequentes</p>
 					<ArrowRight2
 						size='16'

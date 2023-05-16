@@ -1,0 +1,41 @@
+.coins {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #ffffff;
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);
+	border-radius: 8px;
+	padding: 24px;
+}
+
+.coins p {
+	font-size: 20px;
+	font-weight: 700;
+	width: 136px;
+	margin: 0;
+}
+.coins img {
+	margin: 0;
+}
+
+.sub_rewards {
+	font-weight: 700;
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.reward {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.name {
+	font-weight: 500;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.reward h2 {
+	font-size: 18px;
+	font-weight: 600;
+}

@@ -24,7 +24,10 @@ const HistoryPoints = () => {
 				/>
 			</div>
 			<h2 className={styles.sub_rewards}>Recompensas possíveis</h2>
-			<div className={styles.coins}>
+			<div
+				className={styles.coins}
+				onClick={() => navigate('/rewards')}
+			>
 				<div className={styles.reward}>
 					<p className={styles.name}>Caneca da Loja Tal</p>
 					<h2>50 Chicoins</h2>
