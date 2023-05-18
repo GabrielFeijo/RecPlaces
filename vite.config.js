@@ -7,13 +7,7 @@ export default defineConfig({
 	plugins: [
 		react(),
 		VitePWA({
-			// add this to cache all the imports
-			workbox: {
-				globPatterns: ['**/*'],
-			},
-			// add this to cache all the
-			// static assets in the public folder
-			includeAssets: ['/assets/loading.png'],
+			includeAssets: ['loading.png'],
 			registerType: 'autoUpdate',
 			manifest: {
 				background_color: '#1aa7ec',
