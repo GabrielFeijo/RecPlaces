@@ -14,6 +14,7 @@ export default defineConfig({
 			// add this to cache all the
 			// static assets in the public folder
 			includeAssets: ['**/*'],
+			registerType: 'autoUpdate',
 			manifest: {
 				background_color: '#1aa7ec',
 				description:
