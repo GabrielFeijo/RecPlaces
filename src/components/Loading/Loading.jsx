@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Loading.module.css';
 
-import loading from '../../assets/loading.png';
+import loading from '../../../public/assets/loading.png';
 
 export const Loading = () => {
 	return (
