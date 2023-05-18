@@ -20,8 +20,8 @@ const customStyle = [
 
 const InteractiveMap = () => {
 	const [position, setPosition] = useState({
-		lat: -3.745,
-		lng: -38.523,
+		lat: -8.0631,
+		lng: -34.8711,
 	});
 	const [vh, setVh] = useState(window.innerHeight);
 	const [markers, setMarkers] = useState(false);
@@ -77,12 +77,6 @@ const InteractiveMap = () => {
 									position={position}
 									label={{ text: 'Sua localização', className: styles.point }}
 								/>
-								{/* <Marker
-									icon={{
-										url: 'https://media3.giphy.com/media/hWdpNN0WVZi6erabrI/giphy.gif?cid=6c09b95255a65961323f3d97403782a393ddb6a393eda7ee&ep=v1_internal_gifs_gifId&rid=giphy.gif&ct=s',
-									}}
-									position={position}
-								/> */}
 
 								<Marker
 									icon={{
@@ -90,17 +84,17 @@ const InteractiveMap = () => {
 										scaledSize: { width: 110, height: 110 },
 									}}
 									position={{ lat: position.lat + 0.005, lng: position.lng }}
-									label={{ text: 'Frevinho leve', className: styles.point }}
+									label={{ text: 'Frevo', className: styles.point }}
 								/>
 
 								<Marker
 									icon={{
-										url: 'https://cdn.discordapp.com/attachments/786006828466044931/1104569817056411730/Autoconhecimento._Saude_Mental._Janeiro_Branco._Video_para_Reels_do_Instagram..gif',
-										scaledSize: { width: 110, height: 170 },
+										url: 'https://media3.giphy.com/media/RJmseVPqTzzeCtPOJN/giphy.gif?cid=6c09b952uaa6m3bqdam6ra4gc6wcd3lkg3f8ajjqhox5p7tu&rid=giphy.gif&ct=s',
+										scaledSize: { width: 50, height: 80 },
 									}}
 									position={{ lat: position.lat, lng: position.lng + 0.02 }}
 									label={{
-										text: 'Arraial do Quadril',
+										text: 'Samba',
 										className: styles.point,
 									}}
 								/>
@@ -111,7 +105,7 @@ const InteractiveMap = () => {
 									}}
 									position={{ lat: position.lat, lng: position.lng - 0.02 }}
 									label={{
-										text: 'Maracatu maneiro',
+										text: 'Maracatu',
 										className: styles.point,
 									}}
 								/>
@@ -125,7 +119,7 @@ const InteractiveMap = () => {
 										strokeWeight: 2,
 									}}
 									position={{ lat: position.lat - 0.005, lng: position.lng }}
-									label={{ text: 'Venda do seu Zé', className: styles.point }}
+									label={{ text: 'Caboclinho', className: styles.point }}
 								/>
 							</>
 						)}
