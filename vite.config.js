@@ -7,7 +7,6 @@ export default defineConfig({
 	plugins: [
 		react(),
 		VitePWA({
-			includeAssets: ['loading.png'],
 			registerType: 'autoUpdate',
 			manifest: {
 				background_color: '#1aa7ec',
@@ -35,6 +34,10 @@ export default defineConfig({
 					},
 				],
 				icons: [
+					{
+						src: 'loading.png',
+						sizes: '335x106',
+					},
 					{
 						src: '/pwa/windows11/SmallTile.scale-100.png',
 						sizes: '71x71',
