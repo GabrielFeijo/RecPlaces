@@ -7,12 +7,10 @@ export default defineConfig({
 	plugins: [
 		react(),
 		VitePWA({
-			workbox: {
-				globPatterns: ['**/*'],
-			},
+			includeAssets: ['./src/assets/logo.png', './src/assets/loading.png'],
 			registerType: 'autoUpdate',
 			manifest: {
-				background_color: '#ffffff',
+				background_color: '#1aa7ec',
 				description:
 					'O RecPlaces oferece uma ampla gama de recursos e funcionalidades projetados para transformar sua visita em uma jornada memorável. Com um mapa interativo e detalhado, você poderá navegar facilmente pelas ruas pitorescas, praças encantadoras e monumentos históricos que compõem essa região icônica.',
 				dir: 'ltr',
@@ -22,7 +20,7 @@ export default defineConfig({
 				scope: '/',
 				short_name: 'RecPlaces',
 				start_url: '/',
-				theme_color: '#1aa7ec',
+				theme_color: '#fff',
 				categories: ['entertainment', 'games', 'navigation', 'photo', 'travel'],
 				screenshots: [
 					{
