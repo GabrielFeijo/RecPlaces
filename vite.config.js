@@ -7,6 +7,7 @@ export default defineConfig({
 	plugins: [
 		react(),
 		VitePWA({
+			includeAssets: ['logo.png', 'loading.png'],
 			registerType: 'autoUpdate',
 			manifest: {
 				background_color: '#ffffff',
@@ -23,13 +24,13 @@ export default defineConfig({
 				categories: ['entertainment', 'games', 'navigation', 'photo', 'travel'],
 				screenshots: [
 					{
-						src: '/pwa/screen1.png',
-						sizes: '1280x800',
+						src: '/pwa/screen2.png',
+						sizes: '750x1334',
 						type: 'image/png',
 					},
 					{
-						src: '/pwa/screen2.png',
-						sizes: '750x1334',
+						src: '/pwa/screen1.png',
+						sizes: '1280x800',
 						type: 'image/png',
 					},
 				],
