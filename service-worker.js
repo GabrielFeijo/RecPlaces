@@ -4,10 +4,11 @@ importScripts(
 	'https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js'
 );
 
-const CACHE = 'pwabuilder-page';
+const CACHE = 'RecPlaces-page';
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
 const offlineFallbackPage = [
+	'index.html',
 	'./src/routes/Home/Home.jsx',
 	'./src/routes/Home/Home.module.css',
 	'./src/routes/Home/Menu.jsx',

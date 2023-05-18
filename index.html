@@ -25,6 +25,81 @@
 			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="manifest"
+			href="manifest.json"
+		/>
+
+		<meta
+			name="description"
+			content="O RecPlaces oferece uma ampla gama de recursos e funcionalidades projetados para transformar sua visita em uma jornada memorável. Com um mapa interativo e detalhado, você poderá navegar facilmente pelas ruas pitorescas, praças encantadoras e monumentos históricos que compõem essa região icônica"
+		/>
+		<meta
+			name="mobile-web-app-capable"
+			content="yes"
+		/>
+		<meta
+			name="msapplication-TileImage"
+			content="pwa/ios/144.png"
+		/>
+		<meta
+			name="msapplication-TileColor"
+			content="#31506F"
+		/>
+		<meta
+			name="theme-color"
+			content="#1aa7ec"
+		/>
+		<link
+			rel="shortcut icon"
+			sizes="192x192"
+			href="pwa/ios/192.png"
+		/>
+		<link
+			rel="shortcut icon"
+			sizes="128x128"
+			href="pwa/ios/128.png"
+		/>
+
+		<meta
+			name="apple-mobile-web-app-capable"
+			content="yes"
+		/>
+		<meta
+			name="apple-mobile-web-app-status-bar-style"
+			content="black"
+		/>
+		<meta
+			name="apple-mobile-web-app-title"
+			content="RecPlaces"
+		/>
+		<link
+			rel="apple-touch-icon"
+			href="pwa/ios/144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			href="touch-icon-iphone.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="pwa/ios/152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="pwa/ios/180.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="167x167"
+			href="pwa/ios/167.png"
+		/>
+		<meta
+			name="apple-mobile-web-app-capable"
+			content="yes"
+		/>
 	</head>
 	<body>
 		<div id="root"></div>
@@ -32,5 +107,30 @@
 			type="module"
 			src="/src/main.jsx"
 		></script>
+
+		<script>
+			let newWorker;
+
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('/service-worker.js').then((reg) => {
+					reg.addEventListener('updatefound', () => {
+						// A wild service worker has appeared in reg.installing!
+						newWorker = reg.installing;
+						newWorker.addEventListener('statechange', () => {
+							// Has network.state changed?
+						});
+					});
+				});
+				let refreshing;
+				navigator.serviceWorker.addEventListener(
+					'controllerchange',
+					function () {
+						if (refreshing) return;
+						window.location.reload();
+						refreshing = true;
+					}
+				);
+			}
+		</script>
 	</body>
 </html>
