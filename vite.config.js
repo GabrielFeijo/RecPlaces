@@ -13,7 +13,7 @@ export default defineConfig({
 			},
 			// add this to cache all the
 			// static assets in the public folder
-			includeAssets: ['**/*'],
+			includeAssets: ['/assets/loading.png'],
 			registerType: 'autoUpdate',
 			manifest: {
 				background_color: '#1aa7ec',
