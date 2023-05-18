@@ -7,7 +7,7 @@ export default defineConfig({
 	plugins: [
 		react(),
 		VitePWA({
-			includeAssets: ['/assets/logo.png', '/loading.png', , 'loading.png'],
+			includeAssets: ['/assets/logo.png', '/loading.png', 'loading.png'],
 			registerType: 'autoUpdate',
 			manifest: {
 				background_color: '#1aa7ec',
