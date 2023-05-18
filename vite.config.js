@@ -7,7 +7,13 @@ export default defineConfig({
 	plugins: [
 		react(),
 		VitePWA({
-			registerType: 'autoUpdate',
+			// add this to cache all the imports
+			workbox: {
+				globPatterns: ['**/*'],
+			},
+			// add this to cache all the
+			// static assets in the public folder
+			includeAssets: ['**/*'],
 			manifest: {
 				background_color: '#1aa7ec',
 				description:
@@ -34,10 +40,6 @@ export default defineConfig({
 					},
 				],
 				icons: [
-					{
-						src: 'loading.png',
-						sizes: '335x106',
-					},
 					{
 						src: '/pwa/windows11/SmallTile.scale-100.png',
 						sizes: '71x71',
