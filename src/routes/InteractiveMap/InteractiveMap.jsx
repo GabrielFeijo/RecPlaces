@@ -20,9 +20,10 @@ const customStyle = [
 
 const InteractiveMap = () => {
 	const [position, setPosition] = useState({
-		lat: -8.0631,
-		lng: -34.8711,
+		lat: -8.0663201,
+		lng: -34.9150397,
 	});
+
 	const [vh, setVh] = useState(window.innerHeight);
 	const [markers, setMarkers] = useState(false);
 
