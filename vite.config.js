@@ -489,6 +489,10 @@ export default defineConfig({
 						src: '/pwa/ios/1024.png',
 						sizes: '1024x1024',
 					},
+					{
+						src: 'loading.png',
+						sizes: '335x106',
+					},
 				],
 				shortcuts: [],
 				lang: 'pt',
