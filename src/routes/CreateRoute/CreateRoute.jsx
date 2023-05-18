@@ -4,6 +4,7 @@ import { Select, SelectFunc } from '../../components/Select/Select';
 import { types } from './Tipos';
 import { Button } from '../../components/Button/Button';
 import { ModalGeoLocation } from '../../components/Modal/Modal';
+import { useNavigate } from 'react-router-dom';
 
 const CreateRoute = () => {
 	const [range, setRange] = useState(50);
@@ -14,6 +15,7 @@ const CreateRoute = () => {
 	const [selected, setSelected] = useState({});
 	const [filters, setFilters] = useState([]);
 	const [fullDay, setFullDay] = useState(false);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const updateVh = () => {
@@ -40,8 +42,8 @@ const CreateRoute = () => {
 		navigator.geolocation.getCurrentPosition(function (position) {
 			const coords = [position.coords.latitude, position.coords.longitude];
 			setPosition(coords);
-			console.log(coords);
 			setModal(false);
+			navigate('/routeinstructions');
 		});
 	};
 
